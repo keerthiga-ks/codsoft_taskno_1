@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Portfolio</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+        <style>
+            html{
+                scroll-behavior: smooth;
+            }
+            body{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+                background: linear-gradient(135deg, #1f2937, #374151);
+            }
+            .colour{
+                padding:0;
+                display:flex;
+                flex-direction:column;
+                position:fixed;
+                padding-top: 0px;
+                column-gap:560px;
+                align-items:center;
+                justify-content: space-between;
+                z-index:100;
+            }
+            .portfolio{
+                padding-top: 35px;
+                margin-left:30px;
+                display: flex;
+                position: fixed;
+                color:#da1574;
+                font-family:ubuntu,sans-serif;
+                font-size:30px;
+                font-weight:bold;
+                text-decoration: none;
+                padding-bottom:30px;
+            }
+            .left-section{
+                height:35px;
+                margin-left:20px;
+                font-weight:700;
+                font-size:30px;
+            }
+            a{
+                text-decoration:none;
+                padding:5px 10px 5px 10px;
+                color:white;
+                font-family: arial;
+            }
+            .nav{
+                display:flex;
+                position:fixed;
+                color:white;
+                column-gap: 40px;
+                font-weight:500;
+                cursor:pointer;
+                margin-left:600px;
+                font-size:18px;
+                font-weight:500;
+            }
+            .nav a:hover{
+                transition:0.15;
+                background-color:#da1574;
+                color:white;
+                border-color:#da1574;
+                font-size: 16px;
+                font-family:Roboto;
+                border-radius:8px;
+            }
+            .nav a:active{
+                background-color: #da1574;
+                color:white;
+                opacity:0.8;
+            }
+            .hi,.work{
+                font-family: ubuntu;
+                font-weight:700;
+                color:aliceblue;
+                font-size:18px;
+                margin-left:70px;
+                line-height: 0;
+            }
+            
+            .hi{
+                margin-top:320px;
+              
+            }
+            .work{
+                margin-bottom:100px;
+            }
+            .para{
+                margin: 0;
+                padding: 0;
+                display: grid;
+                grid-template-columns: 400px 600px;
+            }
+            .name{
+                margin-left:66px;
+                margin-top:0;
+                font-family:ubuntu;
+                font-weight:700;
+                color:#da1574;
+                font-size: 33px;
+                margin-bottom:0;
+            }
+            .profile{
+                margin-top:210px;
+                height:320px;
+                width:320px;
+                border-radius:160px;
+                margin-left:130px;
+            }
+            .about-button{
+                padding-top:130px;
+                display:block;
+            }
+            .skills-button{
+                margin-top:900px;
+                display:block;
+            }
+            .about-design{
+                font-family:kanit;
+                font-size:30px;
+                color:#ffc40c;
+                margin-top:50px;
+                margin-left:62px;
+                font-weight:500;
+                display:block;
+                margin-bottom: 20px;
+            }
+            .pic{
+                margin:0;
+            }
+            .skill-design,.project-design{
+                margin-top: 80px;
+                font-family:kanit;
+                font-size:29px;
+                color:  #ffc40c;
+                margin-top:50px;
+                margin-left:62px;
+                font-weight:500;
+                display:block;
+                margin-bottom: 20px;
+            }
+            .heading-1{
+                font-family:kanit;
+                font-size:28px;
+                color:#da1574;
+                margin-top:50px;
+                margin-left:60px;
+                font-weight:500;
+                display:block;
+                margin-bottom: 40px;
+            }
+            .web{
+                font-size:18px;
+                color:#da1574;
+            }
+            .myself{
+                font-family:Arial;
+                width:800px;
+                margin-left:120px;
+                margin-right:120px;
+                color:white;
+                font-size:18px;
+                font-weight:500;
+            }
+            .c{
+                margin-left:40px;
+                display:grid;
+                grid-template-columns: 150px 400px;
+            }
+            .c-img{
+                height:80px;
+                width:80px;
+                margin-left:50px;
+                margin-bottom:20px;
+            }
+            .p-desc{
+                color:rgba(245, 245, 245, 0.966);
+                font-family:kanit;
+                width:950px;
+                margin-right:120px;
+                font-size:16px;
+                font-weight:50px;
+                line-height: 26px;
+            }
+            .about-content{
+                margin-bottom:300px;
+            }
+            .skill-content,.project-content{
+                padding-top:45px;
+                margin-bottom:100px;
+            }
+            .grid{
+                display: grid;
+                grid-template-columns:500px 600px;
+                column-gap: 40px;
+            }
+            .videopic1{
+                margin-left:300px;
+                height:180px;
+                object-fit: contain;
+                margin-top:0;
+            }
+            .full{
+                margin-bottom: 12px;
+              
+            }
+            .videopic{
+                margin-left:180px;
+            }
+         
+            .title{
+                margin-left:270px;
+                font-weight:700;
+                font-family:arial;
+                color:#da1574;
+                font-size:20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .title1{
+                margin-left:340px;
+                font-weight:700;
+                font-family:arial;
+                color:#da1574;
+                font-size:20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .author{
+                color:white;
+                font-family:kanit;
+                font-size:16px;
+                margin-bottom: 4px;
+                line-height: 22px;
+                margin-left:155px;
+            }
+            .author1{
+                color:white;
+                font-family:kanit;
+                font-size:16px;
+                margin-bottom: 4px;
+                line-height: 22px;
+                margin-left:270px;
+                
+            }
+            .contact-content{
+                padding-top:130px;
+            }
+            .start{
+                font-weight:bold;
+                color:white;
+                font-family:arial;
+                margin-left:100px;
+                font-size:18px;
+                color:#ffc40c;
+            }
+            .note{
+                margin-top:50px;
+                color:white;
+                font-family:kanit;
+                margin-left:430px;
+                font-size:16px;
+                display:block;
+            }
+            .frstname{
+                height:40px;
+                width:266px;
+                background-color: rgb(240,240,240);
+                border-width: 1px;
+                border-style:solid;
+                border-color:rgb(192,192,192);
+                margin-left:430px;
+                padding-left:15px;
+                margin-bottom: 40px;
+                border-radius:6px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="left-section">
+                <a href="#home" class="portfolio">Portfolio.</a>
+            </div>
+        
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+        <div id="home" class="content">
+            <div class="para">
+                <div>
+                    <p class="hi">Hello It's Me</p>
+                    <p><span class="name">Keerthiga K S</span></p>
+                    <p class="work">And I'm a Passionate Web Developer !</p>
+                </div>
+                <div class="pic">
+                    <img class="profile" src="img.png">
+                </div>
+            </div>
+        </div>
+        <div id="about" class="about-content">
+            <div class="about-button">
+                <u class="about-design">About me</u>
+                <p class="myself">* I'm Keerthiga, a second-year Computer Science Engineering student at KLN College of Engineering.</p>
+                <p class="myself">* My passion lies in coding and crafting <span class="web">web applications</span>.</p>
+                <p class="myself">* With a keen eye for detail and a strong grasp of programming concepts, I strive to excel in crafting efficient and user-friendly software solutions.</p>
+                <p class="myself">* My dedication to honing my coding skills allows me to tackle challenges with confidence and creativity.</p>
+                <p class="myself">* I am enthusiastic about exploring new technologies and contributing to <span class="web">innovative projects</span> in the field of web development!</p>
+            </div>
+        </div>
+        <div id="skills" class="skill-content">
+            <div class="skills-buttton">
+                <u class="skill-design">My Programming Skills</u>
+            </div> 
+                <div class="c">
+                    <img class="c-img" src="c2.jpg">
+                    <p class="p-desc">Proficient in C programming, having acquired expertise through hands-on projects and professional training. Skilled in applying C for developing efficient software solutions and working with low-level programming concepts.</p>
+                </div>
+                <div class="c">
+                    <img class="c-img" src="py.png">
+                    <p class="p-desc">I have acquired a thorough understanding of Python's syntax and semantics, emphasizing proper code structure, indentation, and best practices.</p>
+                </div>
+                <div class="c">
+                    <img class="c-img" src="java.jpg">
+                    <p class="p-desc">Learning Java has been a journey filled with excitement and growth. The intricacies of the language and the endless possibilities for application development have ignited my passion.</p>
+                </div>
+                <div class="c">
+                    <img class="c-img" src="htm-2.jpg">
+                    <p class="p-desc">My journey into the world of web development began with HTML (HyperText Markup Language), the foundational building block for creating web pages. I have developed skills in creating and styling tables!</p>
+                </div>
+                <div class="c">
+                    <img class="c-img" src="css-2.png">
+                    <p class="p-desc">My experience with Cascading Stylesheets (CSS) has played a significant role in my journey to becoming a proficient web developer. Through CSS, I have developed the ability to create visually appealing and responsive web designs.</p>
+                </div>
+        </div>
+        <div id="projects" class="project-content">
+            <div class="project-button">
+                <u class="project-design">My Projects !</u>
+            </div>
+            <div class="grid">
+                <div class="fullength">
+                    <div class="full">
+                        <img class="videopic" src="quiz-img.png">
+                    </div>
+                    <div class="separation">
+                        <u class="title">QUIZ APP</u>
+                        <p class="author">In the Smart India Hackathon, I played a pivotal role in designing and developing a quiz application using Python. This project involved creating a user-friendly interface, incorporating various question types, and implementing scoring mechanisms. Our team's innovative approach to user engagement and data management helped us achieve significant milestones during the hackathon, demonstrating our capability to deliver a high-quality product within a competitive timeframe</p>
+                    </div>
+                </div>
+                <div class="fullength">
+                    <div class="full">
+                        <img class="videopic1" src="final.png">
+                    </div>
+                    <div class="separation">
+                        <u class="title1">YOUTUBE CLONE</u>
+                        <p class="author1">As part of a web development project, I successfully recreated a YouTube page using HTML and CSS. This involved meticulous attention to design details, ensuring accurate replication of the layout, color schemes, typography, and interactive elements.This project not only demonstrated my ability to recreate complex web layouts but also highlighted my proficiency in front-end development and my understanding of responsive design principles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="contact-content">
+           <p class="start">Let's start a Conversation here !</p>
+           <p class="note">Please note : all fields are required</p>
+           <div>
+            <input class="frstname" type="text" placeholder="Your First Name">
+           </div>
+           <div>
+            <input class="frstname" type="text" placeholder="Your Last Name">
+           </div>
+           <div>
+            <input class="frstname" type="text" placeholder="Your Mail-id">
+           </div>
+           <div>
+            <input class="frstname" type="text" placeholder="Your Contact no">
+           </div>
+          
+    </body>
+</html>
